@@ -1,0 +1,4 @@
+Please replace the two clauses in the middle with this.
+
+ssh root@127.0.0.1 -p 10022 "cd / && sh /run.sh"
+scp -P 10022 root@127.0.0.1:/graph*.pdf .

@@ -1,0 +1,21 @@
+version: '3'
+services:
+       server:
+               build: ./Container1
+               container_name: server
+               ports:
+                       - "20022:22"
+               networks:
+                       - channel
+
+       client:
+               build: ./Container2
+               container_name: client
+               ports:
+                       - "10022:22"
+               networks:
+                       - channel
+
+networks:
+       channel:
+               driver: bridge
